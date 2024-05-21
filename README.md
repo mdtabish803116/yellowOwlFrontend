@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
+#Tech Stack --  React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Seps to run the Project
 
-Currently, two official plugins are available:
+1. Run command 'npm install' after clone the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Run command 'npm run dev'
 
-## Expanding the ESLint configuration
+## Project url -- 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+https://yellow-owl-frontend-ashy.vercel.app/
 
-- Configure the top-level `parserOptions` property like this:
+## Features--
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. user can see the Student List as th web page loaded 
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. user can Add new student to click on the 'ADD NEW STUDENT' button in right side
+
+3. user can also update and  delete the user details
+
+4. App is responsive so that it can work on any size of device 
