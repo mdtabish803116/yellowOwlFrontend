@@ -38,6 +38,7 @@ const Home = () => {
   const [studentId, setStudentId] = useState<string>("");
   const [loading , setLoading] = useState<boolean>(false);
   const [error , setError] = useState<boolean>(false);
+  const [errorMessage , setErrorMessage] = useState<String>("");
 
   const [formData, setFormData] = useState<Student>({
     name: "",
@@ -82,7 +83,12 @@ const Home = () => {
       axios
         .post(`${BASE_URL}/postStudent`, formData)
         .then((res) => {
-          setStudents([...students, res.data.student]);
+          console.log("res--" , res)
+          if(res.data?.error){
+            setErrorMessage(res.data.messgae)
+          }else {
+            setStudents([...students, res.data.student]);
+          }
           setFormData({
             name: "",
             email: "",
@@ -162,6 +168,7 @@ const Home = () => {
     <Box bg={"#E5E7EB"} height={"90vh"}>
       {loading &&  <ErrorLoading text = "Loading..."/>}
       {error && <ErrorLoading text = "Something went wrong"/>}
+      {errorMessage && <ErrorLoading text = {errorMessage}/>} 
       <VStack h={"95vh"} p={5}>
         <HStack
           w={"100%"}
